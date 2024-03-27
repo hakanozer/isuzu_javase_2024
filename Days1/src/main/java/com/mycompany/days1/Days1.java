@@ -74,10 +74,7 @@ public class Days1 {
         System.out.println("float: " + f1);
         int fint = (int) f1;
         System.out.println("int: " + fint);
-                
-
-
-        maven central
+       
     }
     
     public void call() {
