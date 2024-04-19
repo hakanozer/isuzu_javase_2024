@@ -2,7 +2,7 @@
 package days.pkg6;
 
 
-public class Profile {
+public class Profile extends Action{
     
     int age = 0;
    
@@ -16,6 +16,10 @@ public class Profile {
         }
         return size;
     }
+
+   
+    
+    
     
     
     

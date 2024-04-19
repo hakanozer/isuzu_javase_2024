@@ -33,7 +33,7 @@ public class Days6 {
         Profile profile1 = action.gotoProfile(30);
         System.out.println("Age -2:" + profile1.age);
         
-        action.addLines("Adr-1", "Adr-2", "Adr-3");
+        action.addLines("Adr-1", "Adr-2", "Adr-3", "Adr-4");
         
         
     }
