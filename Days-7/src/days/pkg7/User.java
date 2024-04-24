@@ -1,10 +1,7 @@
 
 package days.pkg7;
 
-/**
- *
- * @author hakan
- */
+
 public class User extends Action {
 
     
