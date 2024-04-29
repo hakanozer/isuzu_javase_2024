@@ -1,0 +1,23 @@
+# Netbeans projects
+conf.password=Enovia123
+conf.securityContext=ctx\:\:VPLMAdmin.ISUZU.Default
+internal=http://qa22x.isuzu.com.tr:8070/internal
+name=creator
+pwd=
+creator_pwd=
+conf.host=http\://qa22x.isuzu.com.tr\:8070/internal
+conf.userName=admin_platform
+conf.mcsPath=C:\\DassaultSystemes\\R2022x\\3DSpace
+conf.spacehost=https\://qa22x.isuzu.com.tr/3dspace
+conf.passporthost=https\://qa22x.isuzu.com.tr/3dpassport
+conf.searchhost=https\://qa22x.isuzu.com.tr/federated
+conf.passport=false
+conf.mailServer=isuzu.com.tr
+conf.videoFolder=c:/temp
+conf.mailServer=smtp.office365.com
+conf.cloudMail=false
+conf.mailUserName=admin_platform
+conf.mailPassword=Enovia123
+conf.mailPort=587
+conf.brokerURL=tcp://10.40.1.179:61616
+conf.brokerGUI=http://10.40.1.179:8085/activemq-web-consolez
