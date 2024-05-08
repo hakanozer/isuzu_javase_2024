@@ -75,4 +75,61 @@ public class CustomerService {
     }
     
     
+    public int delete( int cid ) {
+        DB db = new DB();
+        int status = 0;
+        try {
+            String sql = "delete from customer where cid = ?";
+            PreparedStatement pre = db.connect().prepareStatement(sql);
+            pre.setInt(1, cid);
+            status = pre.executeUpdate();
+        } catch (Exception e) {
+            System.err.println("delete error: " + e);
+        } finally {
+            db.close();
+        }
+        return status;
+    }
+    
+    
+    public int update( Customer c ) {
+        int status = 0;
+        DB db = new DB();
+        try {
+            String sql = "update customer set name = ?, surname = ?, email = ?, password = ? where cid = ?";
+            PreparedStatement pre = db.connect().prepareStatement(sql);
+            pre.setString(1, c.getName());
+            pre.setString(2, c.getSurname());
+            pre.setString(3, c.getEmail());
+            pre.setString(4, c.getPassword());
+            pre.setInt(5, c.getCid());
+            status = pre.executeUpdate();
+        } catch (Exception e) {
+            System.err.println("update error: " + e);
+        } finally {
+            db.close();
+        }
+        return status;
+    }
+    
+    
+    public boolean login(String email, String password) {
+        DB db = new DB();
+        boolean status = false;
+        try {
+            String sql = "select * from customer where email = ? and password = ? ";
+            System.out.println(sql);
+            PreparedStatement pre = db.connect().prepareStatement(sql);
+            pre.setString(1, email);
+            pre.setString(2, password);
+            ResultSet rs = pre.executeQuery();
+            status = rs.next();
+        } catch (Exception e) {
+            System.err.println("login error: " + e);
+        } finally {
+            db.close();
+        }
+        return status;
+    }
+    
 }
